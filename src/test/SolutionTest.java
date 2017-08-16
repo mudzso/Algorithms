@@ -84,11 +84,11 @@ public class SolutionTest {
     @Test
     public void confirmEnding() throws Exception {
         assertEquals(true,solution.confirmEnding("Bastian","n"));
-        assertEquals(true,solution.confirmEnding("Open sesame", "same")​);
+        assertEquals(true,solution.confirmEnding("Open sesame","same"));
         assertEquals(true,solution.confirmEnding("He has to give me a new name", "name"));
         assertEquals(false,solution.confirmEnding("Connor","n"));
         assertEquals(false,solution.confirmEnding("If you want to save our world, you must hurry. We dont know how much longer we can withstand the nothing", "mountain"));
-        assertEquals(false,solution.confirmEnding("Open sesame", "pen")​);
+        assertEquals(false,solution.confirmEnding("Open sesame","pen"));
         assertEquals(false,solution.confirmEnding("Walking on water and developing software from a specification are easy if both are frozen","specification"));
     }
 
@@ -107,7 +107,7 @@ public class SolutionTest {
         assertEquals("A-tisket...",solution.truncateString("A-tisket a-tasket A green and yellow basket", 11));
         assertEquals("Peter Piper...",solution.truncateString("Peter Piper picked a peck of pickled peppers", 14));
         assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisketa-tasket A green and yellow basket".length()));
-        assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisket a-tasket A green and yellow basket".length() + 2)​);
+        assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisketa-tasket A green and yellow basket".length())+2);
         assertEquals("A...",solution.truncateString("A-",1));
         assertEquals("Ab...",solution.truncateString("Absolutely Longer",2));
     }
