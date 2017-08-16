@@ -1,6 +1,7 @@
 package test;
 
 import org.testng.annotations.Test;
+import solutions.MudzsoSolution;
 import solutions.MySolution;
 import solutions.Solution;
 
@@ -9,7 +10,7 @@ import static org.junit.Assert.*;
 public class SolutionTest {
 
 
-    private Solution solution = null;
+    private Solution solution = new MySolution();
     @Test
     public void testTitleCase() throws Exception {
         assertEquals("I'm A Little Tea Pot",solution.titleCase("I'm a little tea pot"));
