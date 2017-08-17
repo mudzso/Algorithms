@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class SolutionTest {
 
 
-    private Solution solution = new MudzsoSolution();
+    private Solution solution = new MySolution();
     @Test
     public void testTitleCase() throws Exception {
         assertEquals("I'm A Little Tea Pot",solution.titleCase("I'm a little tea pot"));
