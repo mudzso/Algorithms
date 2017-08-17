@@ -10,9 +10,9 @@ public interface Solution {
     boolean confirmEnding(String word,String end);
     String repeatStringNumTimes(String word,int counter);
     String truncateString(String word,int counter);
-    int[][] chunkArrayInGroups(int[] numbers,int counter);
-    int[] slasher(int[] numbers,int counter);
-    int[] destroyer(int[] numbers,int[] remove);
-    int getIndexToIns(int[] numbers,float number);
+    Object[][] chunkArrayInGroups(Object[] numbers,int counter);
+    Object[] slasher(Object[] numbers,int counter);
+    Object[] destroyer(Object[] numbers,Object... remove);
+    int getIndexToIns(Object[] numbers,float number);
     String rot13(String word);
 }

@@ -1,6 +1,6 @@
 package solutions;
 
-public class MySolution implements Solution{
+public class MySolution implements Solution {
     @Override
     public String reverseString(String word) {
         return null;
@@ -47,22 +47,22 @@ public class MySolution implements Solution{
     }
 
     @Override
-    public int[][] chunkArrayInGroups(int[] numbers, int counter) {
-        return new int[0][];
+    public Object[][] chunkArrayInGroups(Object[] numbers, int counter) {
+        return new Object[0][];
     }
 
     @Override
-    public int[] slasher(int[] numbers, int counter) {
-        return new int[0];
+    public Object[] slasher(Object[] numbers, int counter) {
+        return new Object[0];
     }
 
     @Override
-    public int[] destroyer(int[] numbers, int[] remove) {
-        return new int[0];
+    public Object[] destroyer(Object[] numbers, Object... remove) {
+        return new Object[0];
     }
 
     @Override
-    public int getIndexToIns(int[] numbers, float number) {
+    public int getIndexToIns(Object[] numbers, float number) {
         return 0;
     }
 

@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class SolutionTest {
 
 
-    private Solution solution = new MySolution();
+    private Solution solution = new MudzsoSolution();
     @Test
     public void testTitleCase() throws Exception {
         assertEquals("I'm A Little Tea Pot",solution.titleCase("I'm a little tea pot"));
@@ -68,8 +68,8 @@ public class SolutionTest {
     public void testlargestOfFour()throws Exception{
 
         assertArrayEquals(new int []{27,5,39,1001},solution.largestOfFour(new int[][]{
-                {4,5,1,3},
                 {13,27,18,26},
+                {4,5,1,3},
                 {32,35,37,39},
                 {1000,1001,857,1}
         }));
@@ -118,62 +118,62 @@ public class SolutionTest {
         assertArrayEquals(new int[][]{
                 {0,1,2},
                 {3,4,5},
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5},3));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5},3));
         assertArrayEquals(new int[][]{
                 {0,1},
                 {2,3},
                 {4,5},
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5},2));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5},2));
         assertArrayEquals(new int[][]{
                 {0,1,2,3},
                 {4,5},
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5},4));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5},4));
 
         assertArrayEquals(new int[][]{
                 {0,1,2},
                 {3,4,5},
                 {6}
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5,6},3));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5,6},3));
 
         assertArrayEquals(new int[][]{
                 {0,1,2,3},
                 {4,5,6,7},
                 {8}
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5,6,7,8},4));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5,6,7,8},4));
         assertArrayEquals(new int[][]{
                 {0,1},
                 {2,3},
                 {4,5},
                 {6,7},
                 {8}
-        },solution.chunkArrayInGroups(new int[]{0,1,2,3,4,5,6,7,8},2));
+        },solution.chunkArrayInGroups(new Object[]{0,1,2,3,4,5,6,7,8},2));
     }
 
     @Test
     public void slasher() throws Exception {
-        assertArrayEquals(new int[]{3},solution.slasher(new int[]{1,2,3},3));
-        assertArrayEquals(new int[]{1,2,3},solution.slasher(new int[]{1,2,3},0));
-        assertArrayEquals(new int[]{},solution.slasher(new int[]{1,2,3},9));
-        assertArrayEquals(new int[]{},solution.slasher(new int[]{1,2,3},4));
+        assertArrayEquals(new Object[]{3},solution.slasher(new Object[]{1,2,3},3));
+        assertArrayEquals(new Object[]{1,2,3},solution.slasher(new Object[]{1,2,3},0));
+        assertArrayEquals(new Object[]{},solution.slasher(new Object[]{1,2,3},9));
+        assertArrayEquals(new Object[]{},solution.slasher(new Object[]{1,2,3},4));
     }
 
     @Test
     public void destroyer() throws Exception {
-        assertArrayEquals(new int[]{1,1},solution.destroyer(new int[]{1,2,3,1,2,3},new int[]{2,3}));
-        assertArrayEquals(new int[]{1,5,1},solution.destroyer(new int[]{1,2,3,5,1,2,3},new int[]{2,3}));
-        assertArrayEquals(new int[]{1},solution.destroyer(new int[]{3,5,1,2,2},new int[]{2,3,5}));
-        assertArrayEquals(new int[]{},solution.destroyer(new int[]{2,3,2,3},new int[]{2,3,}));
+        assertArrayEquals(new Object[]{1,1},solution.destroyer(new Object[]{1,2,3,1,2,3},new int[]{2,3}));
+        assertArrayEquals(new Object[]{1,5,1},solution.destroyer(new Object[]{1,2,3,5,1,2,3},new int[]{2,3}));
+        assertArrayEquals(new Object[]{1},solution.destroyer(new Object[]{3,5,1,2,2},new int[]{2,3,5}));
+        assertArrayEquals(new Object[]{},solution.destroyer(new Object[]{2,3,2,3},new int[]{2,3,}));
     }
 
     @Test
     public void getIndexToIns() throws Exception {
-        assertEquals(3,solution.getIndexToIns(new int[]{10,20,30,40,50},35));
-        assertEquals(2,solution.getIndexToIns(new int[]{10,20,30,40,50},30));
-        assertEquals(1,solution.getIndexToIns(new int[]{40,60},50));
-        assertEquals(0,solution.getIndexToIns(new int[]{3,10,5},3));
-        assertEquals(2,solution.getIndexToIns(new int[]{5,3,20,3},5));
-        assertEquals(2,solution.getIndexToIns(new int[]{2,20,10},19));
-        assertEquals(3,solution.getIndexToIns(new int[]{2,5,10},15));
+        assertEquals(3,solution.getIndexToIns(new Object[]{10,20,30,40,50},35));
+        assertEquals(2,solution.getIndexToIns(new Object[]{10,20,30,40,50},30));
+        assertEquals(1,solution.getIndexToIns(new Object[]{40,60},50));
+        assertEquals(0,solution.getIndexToIns(new Object[]{3,10,5},3));
+        assertEquals(2,solution.getIndexToIns(new Object[]{5,3,20,3},5));
+        assertEquals(2,solution.getIndexToIns(new Object[]{2,20,10},19));
+        assertEquals(3,solution.getIndexToIns(new Object[]{2,5,10},15));
     }
 
     @Test

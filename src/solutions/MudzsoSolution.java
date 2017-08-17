@@ -1,5 +1,7 @@
 package solutions;
 
+import java.util.Arrays;
+
 public class MudzsoSolution implements Solution{
 
     public String reverseString(String word){
@@ -40,13 +42,39 @@ public class MudzsoSolution implements Solution{
     }
 
     public String titleCase(String word){
-        String[]words = word.split("");
-        return "";
+        String[]words = word.toLowerCase().split(" ");
+        String result = "";
+        for (int i = 0; i<words.length;i++) {
+            String chars = words[i];
+            String resultWord="";
+            for (int j = 0; j < chars.length() ; j++) {
+                if (j==0){
+                    resultWord+=Character.toUpperCase(chars.charAt(0));
+                    continue;
+                }
+                resultWord+=chars.charAt(j);
+            }
+            if (i< words.length-1){
+            result += resultWord+ " ";
+            continue;}
+            result += resultWord;
+
+        }
+        return result;
     }
 
     @Override
     public int[] largestOfFour(int[][] numbers) {
-        return new int[0];
+        int[]result= new int[4];
+        for (int i = 0; i < numbers.length; i++) {
+            int[]inerNumbers = numbers[i];
+            int max = inerNumbers[0];
+            for (int j = 1; j < inerNumbers.length; j++) {
+                if (inerNumbers[j]>max)max = inerNumbers[j];
+            }
+            result[i] = max;
+        }
+        return result;
     }
 
     @Override
@@ -65,24 +93,25 @@ public class MudzsoSolution implements Solution{
     }
 
     @Override
-    public int[][] chunkArrayInGroups(int[] numbers, int counter) {
-        return new int[0][];
+    public Object[][] chunkArrayInGroups(Object[] numbers, int counter) {
+        return new Object[0][];
     }
 
     @Override
-    public int[] slasher(int[] numbers, int counter) {
-        return new int[0];
+    public Object[] slasher(Object[] numbers, int counter) {
+        return new Object[0];
     }
 
     @Override
-    public int[] destroyer(int[] numbers, int[] remove) {
-        return new int[0];
+    public Object[] destroyer(Object[] numbers, Object... remove) {
+        return new Object[0];
     }
 
     @Override
-    public int getIndexToIns(int[] numbers, float number) {
+    public int getIndexToIns(Object[] numbers, float number) {
         return 0;
     }
+
 
     @Override
     public String rot13(String word) {

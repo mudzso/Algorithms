@@ -26,4 +26,7 @@ hs_err_pid*
 .gitignore
 .idea/inspectionProfiles/
 .idea/workspace.xml
-
+/src/solutions/MudzsoSolution.java
+.idea/uiDesigner.xml
+lib/
+out/
