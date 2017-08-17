@@ -108,7 +108,7 @@ public class SolutionTest {
         assertEquals("A-tisket...",solution.truncateString("A-tisket a-tasket A green and yellow basket", 11));
         assertEquals("Peter Piper...",solution.truncateString("Peter Piper picked a peck of pickled peppers", 14));
         assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisketa a-tasket A green and yellow basket".length()));
-        assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisketa a-tasket A green and yellow basket".length())+2);
+        assertEquals("A-tisket a-tasket A green and yellow basket",solution.truncateString("A-tisket a-tasket A green and yellow basket", "A-tisketa a-tasket A green and yellow basket".length()+2));
         assertEquals("A...",solution.truncateString("A-",1));
         assertEquals("Ab...",solution.truncateString("Absolutely Longer",2));
     }
