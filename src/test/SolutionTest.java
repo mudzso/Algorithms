@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class SolutionTest {
 
 
-    private Solution solution = new MySolution();
+    private Solution solution = new MudzsoSolution();
     @Test
     public void testTitleCase() throws Exception {
         assertEquals("I'm A Little Tea Pot",solution.titleCase("I'm a little tea pot"));
@@ -113,7 +113,7 @@ public class SolutionTest {
         assertEquals("Ab...",solution.truncateString("Absolutely Longer",2));
     }
 
-    @org.junit.Test
+    @Test
     public void chunkArrayInGroups() throws Exception {
         assertArrayEquals(new int[][]{
                 {0,1,2},
@@ -151,7 +151,7 @@ public class SolutionTest {
 
     @Test
     public void slasher() throws Exception {
-        assertArrayEquals(new Object[]{3},solution.slasher(new Object[]{1,2,3},3));
+        assertArrayEquals(new Object[]{3},solution.slasher(new Object[]{1,2,3},2));
         assertArrayEquals(new Object[]{1,2,3},solution.slasher(new Object[]{1,2,3},0));
         assertArrayEquals(new Object[]{},solution.slasher(new Object[]{1,2,3},9));
         assertArrayEquals(new Object[]{},solution.slasher(new Object[]{1,2,3},4));
@@ -159,10 +159,10 @@ public class SolutionTest {
 
     @Test
     public void destroyer() throws Exception {
-        assertArrayEquals(new Object[]{1,1},solution.destroyer(new Object[]{1,2,3,1,2,3},new int[]{2,3}));
-        assertArrayEquals(new Object[]{1,5,1},solution.destroyer(new Object[]{1,2,3,5,1,2,3},new int[]{2,3}));
-        assertArrayEquals(new Object[]{1},solution.destroyer(new Object[]{3,5,1,2,2},new int[]{2,3,5}));
-        assertArrayEquals(new Object[]{},solution.destroyer(new Object[]{2,3,2,3},new int[]{2,3,}));
+        assertArrayEquals(new Object[]{1,1},solution.destroyer(new Object[]{1,2,3,1,2,3},2,3));
+        assertArrayEquals(new Object[]{1,5,1},solution.destroyer(new Object[]{1,2,3,5,1,2,3},2,3));
+        assertArrayEquals(new Object[]{1},solution.destroyer(new Object[]{3,5,1,2,2},2,3,5));
+        assertArrayEquals(new Object[]{},solution.destroyer(new Object[]{2,3,2,3},2,3));
     }
 
     @Test
